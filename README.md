@@ -1,4 +1,4 @@
-# FORS2-PolGal
+# FORS2 - Photopolarimtry
 
 ## General Information
 The calibration scripts (here made available) were designed to process raw ESO VLT-FORS2/IPOL fits files, as such they expect a specific header structure.
