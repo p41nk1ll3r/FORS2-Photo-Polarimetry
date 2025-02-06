@@ -6790,10 +6790,9 @@ robust_ks_test <- function(x_dat, y_dat, x_unc, y_unc, norm_bool = T,          #
       new_x_unc <- sqrt(x_unc^2 + unc_min^2)                                   #
                                                                                #
       max_dat <- max(new_x_dat)                                                #
-      maxs <- which(x_dat == max_dat, arr.ind = T)                             #
-      zers <- which(x_dat == 0, arr.ind = T)                                   #
+      maxs <- which(new_x_dat == max_dat, arr.ind = T)                         #
                                                                                #
-      unc_max <- mean(x_unc[maxs])                                             #
+      unc_max <- mean(new_x_unc[maxs])                                         #
                                                                                #
       x_dat <- new_x_dat / max_dat                                             #
       x_unc <- unc_div(new_x_dat, max_dat, new_x_unc, unc_max, x_dat)          #
@@ -6806,10 +6805,9 @@ robust_ks_test <- function(x_dat, y_dat, x_unc, y_unc, norm_bool = T,          #
       new_y_unc <- sqrt(y_unc^2 + unc_min^2)                                   #
                                                                                #
       max_dat <- max(new_y_dat)                                                #
-      maxs <- which(y_dat == max_dat, arr.ind = T)                             #
-      zers <- which(y_dat == 0, arr.ind = T)                                   #
+      maxs <- which(new_y_dat == max_dat, arr.ind = T)                         #
                                                                                #
-      unc_max <- mean(y_unc[maxs])                                             #
+      unc_max <- mean(new_y_unc[maxs])                                         #
                                                                                #
       y_dat <- new_y_dat / max_dat                                             #
       y_unc <- unc_div(new_y_dat, max_dat, new_y_unc, unc_max, y_dat)          #
